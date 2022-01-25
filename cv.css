@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root{
+--clr-rojo: #FB6657;
+--clr-negro: #1A1A1A;
+--clr-negro2: #525252;
+--clr-lineas: #E6E6E6;
+--clr-footer: #999999;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10mm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10pt;
+}
+
+/* FUENTES ============================================ */
+h1{
+    font-size: 24pt;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.4rem;
+    margin-top: 2rem;
+}
+
+h2{
+    font-size: 11pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--clr-rojo);
+    font-size: 10pt;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.p{
+    font-size: 10.33pt;
+    font-family: 'Lato', sans-serif;
+}
+
+.sub-title{
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--clr-negro2);
+}
+
+.name-color{
+    color: var(--clr-rojo);
+}
+
+/* HEADER ============================================ */
+main{
+    min-width: 200mm;
+    max-width: 200mm;
+}
+
+/* HEADER ============================================ */
+header{
+    margin-top: 15mm;
+    margin-bottom: 15mm;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle{
+    margin-right: 5mm;
+    margin-top: 3mm;
+    width: 20mm;
+    height: 20mm;
+    border-radius: 50%;
+    background-color: var(--clr-footer);
+    overflow: hidden;
+}
+
+.profile-circle img{
+    width: 20mm;
+    height: auto;
+    object-fit: contain;
+}
+
+/* COLUMNS ============================================ */
+.grid{
+    min-height: 200mm;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column{
+    width: 50%;
+    min-height: 220mm;
+    border-right: 2px solid var(--clr-lineas);
+}
+
+.right-column{
+    width: 50%;
+    min-height: 220mm;
+}
+
+/* PRESENTACION ============================================ */
+.presentacion,
+.educacion,
+.experiencia,
+.info-personal,
+.info-adicional{
+    margin-bottom: 10mm;
+    padding: 0mm 5mm;
+}
+
+.presentacion p{
+    width: 100%;
+}
+
+/* INFO-PERSONAL ============================================ */
+.icon-card{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5mm;
+}
+
+.icon-card img{
+    height: 5mm;
+    margin-right: 5mm;
+}
+
+/* INFO-ADICIONAL ============================================ */
+ul{
+    margin-left: 5mm;
+}
+
+li{
+    margin-bottom: 5mm;
+}
+
+/* EXPERIENCIA ============================================ */
+.experiencia p{
+    color: var(--clr-footer);
+    font-weight: 600;
+}
+
+.job-card{
+    width: 100%;
+    margin-bottom: 5mm;
+}
+
+.job-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* EDUCACION ============================================ */
+.education-card{
+    width: 100%;
+    display: flex;
+    margin-bottom: 5mm;
+}
+
+.education-card img{
+    height: 8mm;
+    margin-right: 5mm;
+}
+
+/* FOOOTER ============================================ */
+footer{
+    width: 100%;
+    background-color: var(--clr-negro);
+    height: 23mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: var(--clr-footer);
+}
+
+.presentacion,
+.experiencia,
+.educacion,
+.info-adicional,
+.info-personal{
+    line-height: 5mm;
+}
+
+/* OPCIONES DE IMPRESION ============================================ */
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;        
+    }
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
+
